@@ -1,0 +1,12 @@
+# Copyright AGNTCY Contributors (https://github.com/agntcy)
+# SPDX-License-Identifier: Apache-2.0
+
+version: v2
+breaking:
+  use:
+    - WIRE_JSON
+deps:
+  - buf.build/agntcy/oasf
+modules:
+  - path: .
+    name: buf.build/agntcy/oasf-sdk
