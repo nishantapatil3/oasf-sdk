@@ -50,15 +50,8 @@ jobs:
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
         with:
-          files: bin
+          files: bin/**
+          generate_release_notes: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  success:
-    name: Success
-    needs:
-      - release
-    runs-on: ubuntu-latest
-    steps:
-      - name: Echo Success
-        run: echo "::notice Success!"
